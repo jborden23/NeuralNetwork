@@ -4,7 +4,7 @@ Class {
 	#category : #NeuralNetwork
 }
 
-{ #category : #'as yet unclassified' }
+{ #category : #actions }
 Normalization >> normalizeData: aCollectionOfTrainingDataWithExpectedOutput [
 	"Normalize the data provided as argument"
 
@@ -21,7 +21,7 @@ Normalization >> normalizeData: aCollectionOfTrainingDataWithExpectedOutput [
 	^ self normalizeData: aCollectionOfTrainingDataWithExpectedOutput min: min max: max
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #actions }
 Normalization >> normalizeData: aCollectionOfTrainingDataWithExpectedOutput min: minimumValues max: maximumValues [
 	| nbOfColumns result mn mx |
 	nbOfColumns := aCollectionOfTrainingDataWithExpectedOutput first size - 1.

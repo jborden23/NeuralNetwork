@@ -5,13 +5,13 @@ Class {
 }
 
 { #category : #tests }
-NormalizationTest >> testError [
-	self should: [ Normalization new normalizeData: {{10 . 5 . 1}} ] raise: Error
+NormalizationTest >> testEmptyError [
+	self should: [ Normalization new normalizeData: {} ] raise: Error
 ]
 
 { #category : #tests }
-NormalizationTest >> testError02 [
-	self should: [ Normalization new normalizeData: {} ] raise: Error
+NormalizationTest >> testError [
+	self should: [ Normalization new normalizeData: {{10 . 5 . 1}} ] raise: Error
 ]
 
 { #category : #tests }

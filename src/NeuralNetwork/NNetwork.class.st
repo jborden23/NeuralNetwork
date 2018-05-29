@@ -66,6 +66,16 @@ NNetwork >> initialize [
 ]
 
 { #category : #accessing }
+NNetwork >> numberOfInputs [
+	^ layers first neurons size
+]
+
+{ #category : #accessing }
+NNetwork >> numberOfNeurons [
+	^ layers sum: [ :layer | layer neurons size ]
+]
+
+{ #category : #accessing }
 NNetwork >> numberOfOutputs [
 	^ self outputLayer neurons size
 ]
